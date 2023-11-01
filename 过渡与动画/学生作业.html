@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡效果学生作业</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .container {
+            width: 1200px;
+            height: 210px;
+            margin: 40px auto;
+        }
+
+        .container ul {
+            overflow: hidden;
+        }
+
+        .container ul li {
+            float: left;
+            height: 210px;
+            width: 380px;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .container ul li img {
+            height: 210px;
+            width: 380px;
+        }
+
+        .container ul li .info {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding-left: 10px;
+            line-height: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, .5);
+            opacity: 0;
+            transition: opacity 1s linear 0s;
+        }
+
+        .container ul li:hover .info {
+            opacity: 1;
+        }
+
+        .banner {
+            width: 508px;
+            height: 107px;
+            margin: 0 auto;
+        }
+
+        .banner ul {
+            overflow: hidden;
+        }
+
+        .banner ul li {
+            float: left;
+            height: 107px;
+            width: 107px;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .banner ul li img {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            left: 50%;
+            margin-left: -30px;
+            transform: scale(1);
+            transition: transform .5s ease 0s;
+        }
+
+
+        .banner ul li::before {
+            display: block;
+            content: '';
+            height: 107px;
+            width: 107px;
+            transform: rotate(0);
+            transition: transform 1s ease 0s;
+        }
+        
+        /*  */
+        .banner ul li:nth-child(1)::before {
+            background: url(./images/a_1.png) no-repeat;
+        }
+
+        .banner ul li:nth-child(2)::before {
+            background: url(./images/a_2.png) no-repeat;
+        }
+
+        .banner ul li:nth-child(3)::before {
+            background: url(./images/a_3.png) no-repeat;
+        }
+
+        .banner ul li:nth-child(4)::before {
+            background: url(./images/a_4.png) no-repeat;
+        }
+        
+        /*  */
+        .banner ul li:hover::before {
+            transform: rotate(360deg);
+        }
+
+        .banner ul li:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <img src="./images/0.jpg" alt="">
+                <div class="info">北京的故宫</div>
+            </li>
+            <li>
+                <img src="./images/1.jpg" alt="">
+                <div class="info">鸟巢国家体育场</div>
+            </li>
+            <li>
+                <img src="./images/2.jpg" alt="">
+                <div class="info">十七孔桥</div>
+            </li>
+        </ul>
+    </div>
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="./images/icon1.svg" alt="">
+            </li>
+            <li>
+                <img src="./images/icon2.svg" alt="">
+            </li>
+            <li>
+                <img src="./images/icon3.svg" alt="">
+            </li>
+            <li>
+                <img src="./images/icon4.svg" alt="">
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
