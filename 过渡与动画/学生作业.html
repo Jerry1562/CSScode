@@ -212,6 +212,94 @@
 				background-color: rgba(203, 223, 28, 0.295);
 				transform: translateZ(-100px);
 			}
+
+			.container4 {
+				width: 193px;
+				height: 267px;
+				background-image: url(./images/dengpao.png);
+				background-size: contain;
+				margin: 20px auto;
+				position: relative;
+			}
+			.container4 .guang {
+				position: absolute;
+				top: -80px;
+				left: -75px;
+				animation: ss 1s ease 0s infinite alternate;
+			}
+
+			@keyframes ss {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			.container5 {
+				text-align: center;
+				margin: 100px auto;
+				position: relative;
+			}
+
+			.container5 .huojian {
+				animation: fx 1s ease 0s infinite alternate;
+			}
+
+			.container5 .line1 {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				height: 120px;
+				border: 1px solid blue;
+				transform: rotate(45deg) translateY(-100px);
+				animation: ld 1s ease 0s infinite;
+			}
+
+			.container5 .line2 {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: 80px;
+				height: 120px;
+				border: 1px solid blue;
+				transform: rotate(45deg) translateY(-100px);
+				animation: ld 1s ease 0.3s infinite;
+			}
+
+			.container5 .line3 {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: 160px;
+				height: 120px;
+				border: 1px solid blue;
+				transform: rotate(45deg) translateY(-100px);
+				animation: ld 1s ease 0.6s infinite;
+			}
+
+			@keyframes fx {
+				from {
+					transform: translateX(-30px) translateY(-30px);
+				}
+				to {
+					transform: translateX(30px) translateY(30px);
+				}
+			}
+			@keyframes ld {
+				0% {
+					opacity: 0;
+					transform: rotate(45deg) translateY(-150px);
+				}
+				50% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+					transform: rotate(45deg) translateY(200px);
+				}
+			}
 		</style>
 	</head>
 
@@ -269,6 +357,17 @@
 			<div></div>
 			<div></div>
 			<div></div>
+		</div>
+
+		<div class="container4">
+			<img class="guang" src="./images/guang.png" alt="" />
+		</div>
+
+		<div class="container5">
+			<img class="huojian" src="./images/huojian.png" alt="" />
+			<div class="line line1"></div>
+			<div class="line line2"></div>
+			<div class="line line3"></div>
 		</div>
 	</body>
 </html>
