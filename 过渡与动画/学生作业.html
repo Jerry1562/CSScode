@@ -1,222 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>过渡效果学生作业</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>过渡效果学生作业</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+			ul li {
+				list-style: none;
+			}
+			/* 作业1 */
+			.container {
+				width: 1200px;
+				height: 210px;
+				margin: 40px auto;
+			}
 
-        ul li {
-            list-style: none;
-        }
+			.container ul {
+				overflow: hidden;
+			}
 
-        .container {
-            width: 1200px;
-            height: 210px;
-            margin: 40px auto;
-        }
+			.container ul li {
+				float: left;
+				height: 210px;
+				width: 380px;
+				margin-right: 20px;
+				position: relative;
+			}
 
-        .container ul {
-            overflow: hidden;
-        }
+			.container ul li img {
+				height: 210px;
+				width: 380px;
+			}
 
-        .container ul li {
-            float: left;
-            height: 210px;
-            width: 380px;
-            margin-right: 20px;
-            position: relative;
-        }
+			.container ul li .info {
+				width: 100%;
+				height: 30px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				padding-left: 10px;
+				line-height: 30px;
+				color: white;
+				background-color: rgba(0, 0, 0, 0.5);
+				opacity: 0;
+				transition: opacity 1s linear 0s;
+			}
 
-        .container ul li img {
-            height: 210px;
-            width: 380px;
-        }
+			.container ul li:hover .info {
+				opacity: 1;
+			}
 
-        .container ul li .info {
-            width: 100%;
-            height: 30px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            padding-left: 10px;
-            line-height: 30px;
-            color: white;
-            background-color: rgba(0, 0, 0, .5);
-            opacity: 0;
-            transition: opacity 1s linear 0s;
-        }
+			/* 作业2 */
+			.banner {
+				width: 508px;
+				height: 107px;
+				margin: 0 auto;
+			}
 
-        .container ul li:hover .info {
-            opacity: 1;
-        }
+			.banner ul {
+				overflow: hidden;
+			}
 
-        .banner {
-            width: 508px;
-            height: 107px;
-            margin: 0 auto;
-        }
+			.banner ul li {
+				float: left;
+				height: 107px;
+				width: 107px;
+				margin-right: 20px;
+				position: relative;
+			}
 
-        .banner ul {
-            overflow: hidden;
-        }
+			.banner ul li img {
+				height: 60px;
+				width: 60px;
+				position: absolute;
+				top: 50%;
+				margin-top: -30px;
+				left: 50%;
+				margin-left: -30px;
+				transform: scale(1);
+				transition: transform 0.5s ease 0s;
+			}
 
-        .banner ul li {
-            float: left;
-            height: 107px;
-            width: 107px;
-            margin-right: 20px;
-            position: relative;
-        }
+			.banner ul li::before {
+				display: block;
+				content: "";
+				height: 107px;
+				width: 107px;
+				transform: rotate(0);
+				transition: transform 1s ease 0s;
+			}
 
-        .banner ul li img {
-            height: 60px;
-            width: 60px;
-            position: absolute;
-            top: 50%;
-            margin-top: -30px;
-            left: 50%;
-            margin-left: -30px;
-            transform: scale(1);
-            transition: transform .5s ease 0s;
-        }
+			.banner ul li:nth-child(1)::before {
+				background: url(./images/a_1.png) no-repeat;
+			}
 
+			.banner ul li:nth-child(2)::before {
+				background: url(./images/a_2.png) no-repeat;
+			}
 
-        .banner ul li::before {
-            display: block;
-            content: '';
-            height: 107px;
-            width: 107px;
-            transform: rotate(0);
-            transition: transform 1s ease 0s;
-        }
+			.banner ul li:nth-child(3)::before {
+				background: url(./images/a_3.png) no-repeat;
+			}
 
-        /*  */
-        .banner ul li:nth-child(1)::before {
-            background: url(./images/a_1.png) no-repeat;
-        }
+			.banner ul li:nth-child(4)::before {
+				background: url(./images/a_4.png) no-repeat;
+			}
+			.banner ul li:hover::before {
+				transform: rotate(360deg);
+			}
 
-        .banner ul li:nth-child(2)::before {
-            background: url(./images/a_2.png) no-repeat;
-        }
+			.banner ul li:hover img {
+				transform: scale(1.2);
+			}
 
-        .banner ul li:nth-child(3)::before {
-            background: url(./images/a_3.png) no-repeat;
-        }
+			/* 作业3 */
+			.container2 {
+				margin: 20px auto;
+			}
 
-        .banner ul li:nth-child(4)::before {
-            background: url(./images/a_4.png) no-repeat;
-        }
+			.container2 ul li {
+				height: 200px;
+				width: 200px;
+				border: 1px solid black;
+				border-radius: 50%;
+				margin: 60px auto;
+				background-image: url(./images/cat.jpg);
+				background-size: contain;
+				background-position: center center;
+			}
 
-        /*  */
-        .banner ul li:hover::before {
-            transform: rotate(360deg);
-        }
+			.container2 ul li img {
+				height: 200px;
+				width: 200px;
+				border: 1px solid black;
+				border-radius: 50%;
+				transition: transform 1s ease 0s;
+			}
 
-        .banner ul li:hover img {
-            transform: scale(1.2);
-        }
+			.container2 ul li:nth-of-type(1) img {
+				transform-origin: left center;
+			}
 
-        .container2 {
-            margin: 20px auto;
-        }
+			.container2 ul li:nth-of-type(2) img {
+				transform-origin: right center;
+			}
 
-        .container2 ul li {
-            height: 200px;
-            width: 200px;
-            border: 1px solid black;
-            border-radius: 50%;
-            margin: 60px auto;
-            background-image: url(./images/cat.jpg);
-            background-size: contain;
-            background-position: center center;
-        }
+			.container2 ul li:nth-of-type(3) img {
+				transform-origin: center top;
+			}
 
-        .container2 ul li img {
-            height: 200px;
-            width: 200px;
-            border: 1px solid black;
-            border-radius: 50%;
-            transition: transform 1s ease 0s;
-        }
+			.container2 ul li:nth-of-type(1):hover img {
+				transform: perspective(500px) rotateY(-180deg);
+			}
 
-        .container2 ul li:nth-of-type(1) img {
-            transform-origin: left center;
-        }
+			.container2 ul li:nth-of-type(2):hover img {
+				transform: perspective(500px) rotateY(180deg);
+			}
 
-        .container2 ul li:nth-of-type(2) img {
-            transform-origin: right center;
-        }
+			.container2 ul li:nth-of-type(3):hover img {
+				transform: perspective(500px) rotateX(180deg);
+			}
 
-        .container2 ul li:nth-of-type(3) img {
-            transform-origin: center top;
-        }
+			/* 作业4 */
+			.container3 {
+				perspective: 10000px;
+				height: 200px;
+				width: 200px;
+				margin: 200px auto;
+				position: relative;
+				transition: transform 10s ease 0s;
+				/* transform-style属性设置“preserve-3d”，表示所有子元素在3D空间中呈现，默认所有子元素在2D平面呈现 */
+				transform-style: preserve-3d;
+			}
 
-        .container2 ul li:nth-of-type(1):hover img{
-            transform: perspective(500px) rotateY(-180deg);
-        }
+			.container3:hover {
+				transform: perspective(10000px) rotateX(360deg) rotateY(360deg);
+			}
 
-        .container2 ul li:nth-of-type(2):hover img{
-            transform: perspective(500px) rotateY(180deg);
-        }
+			.container3 div {
+				height: 200px;
+				width: 200px;
+				position: absolute;
+			}
 
-        .container2 ul li:nth-of-type(3):hover img{
-            transform: perspective(500px) rotateX(180deg);
-        }
-    </style>
-</head>
+			.container3 div:nth-of-type(1) {
+				background-color: rgba(0, 255, 255, 0.295);
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.container3 div:nth-of-type(2) {
+				background-color: rgba(102, 33, 129, 0.295);
+				transform: rotateX(90deg) translateZ(-100px);
+			}
+			.container3 div:nth-of-type(3) {
+				background-color: rgba(32, 190, 93, 0.295);
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.container3 div:nth-of-type(4) {
+				background-color: rgba(192, 134, 25, 0.295);
+				transform: rotateY(90deg) translateZ(-100px);
+			}
+			.container3 div:nth-of-type(5) {
+				background-color: rgba(165, 41, 177, 0.295);
+				transform: translateZ(100px);
+			}
+			.container3 div:nth-of-type(6) {
+				background-color: rgba(203, 223, 28, 0.295);
+				transform: translateZ(-100px);
+			}
+		</style>
+	</head>
 
-<body>
-    <div class="container">
-        <ul>
-            <li>
-                <img src="./images/0.jpg" alt="">
-                <div class="info">北京的故宫</div>
-            </li>
-            <li>
-                <img src="./images/1.jpg" alt="">
-                <div class="info">鸟巢国家体育场</div>
-            </li>
-            <li>
-                <img src="./images/2.jpg" alt="">
-                <div class="info">十七孔桥</div>
-            </li>
-        </ul>
-    </div>
-    <div class="banner">
-        <ul>
-            <li>
-                <img src="./images/icon1.svg" alt="">
-            </li>
-            <li>
-                <img src="./images/icon2.svg" alt="">
-            </li>
-            <li>
-                <img src="./images/icon3.svg" alt="">
-            </li>
-            <li>
-                <img src="./images/icon4.svg" alt="">
-            </li>
-        </ul>
-    </div>
-    <div class="container2">
-        <ul>
-            <li>
-                <img src="./images/dog.jpg" alt="">
-            </li>
-            <li>
-                <img src="./images/dog.jpg" alt="">
-            </li>
-            <li>
-                <img src="./images/dog.jpg" alt="">
-            </li>
-        </ul>
-    </div>
-</body>
+	<body>
+		<div class="container">
+			<ul>
+				<li>
+					<img src="./images/0.jpg" alt="" />
+					<div class="info">北京的故宫</div>
+				</li>
+				<li>
+					<img src="./images/1.jpg" alt="" />
+					<div class="info">鸟巢国家体育场</div>
+				</li>
+				<li>
+					<img src="./images/2.jpg" alt="" />
+					<div class="info">十七孔桥</div>
+				</li>
+			</ul>
+		</div>
+		<div class="banner">
+			<ul>
+				<li>
+					<img src="./images/icon1.svg" alt="" />
+				</li>
+				<li>
+					<img src="./images/icon2.svg" alt="" />
+				</li>
+				<li>
+					<img src="./images/icon3.svg" alt="" />
+				</li>
+				<li>
+					<img src="./images/icon4.svg" alt="" />
+				</li>
+			</ul>
+		</div>
+		<div class="container2">
+			<ul>
+				<li>
+					<img src="./images/dog.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./images/dog.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./images/dog.jpg" alt="" />
+				</li>
+			</ul>
+		</div>
 
+		<div class="container3">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
 </html>
