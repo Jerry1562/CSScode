@@ -95,7 +95,7 @@
             transform: rotate(0);
             transition: transform 1s ease 0s;
         }
-        
+
         /*  */
         .banner ul li:nth-child(1)::before {
             background: url(./images/a_1.png) no-repeat;
@@ -112,7 +112,7 @@
         .banner ul li:nth-child(4)::before {
             background: url(./images/a_4.png) no-repeat;
         }
-        
+
         /*  */
         .banner ul li:hover::before {
             transform: rotate(360deg);
@@ -120,6 +120,53 @@
 
         .banner ul li:hover img {
             transform: scale(1.2);
+        }
+
+        .container2 {
+            margin: 20px auto;
+        }
+
+        .container2 ul li {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin: 60px auto;
+            background-image: url(./images/cat.jpg);
+            background-size: contain;
+            background-position: center center;
+        }
+
+        .container2 ul li img {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 50%;
+            transition: transform 1s ease 0s;
+        }
+
+        .container2 ul li:nth-of-type(1) img {
+            transform-origin: left center;
+        }
+
+        .container2 ul li:nth-of-type(2) img {
+            transform-origin: right center;
+        }
+
+        .container2 ul li:nth-of-type(3) img {
+            transform-origin: center top;
+        }
+
+        .container2 ul li:nth-of-type(1):hover img{
+            transform: perspective(500px) rotateY(-180deg);
+        }
+
+        .container2 ul li:nth-of-type(2):hover img{
+            transform: perspective(500px) rotateY(180deg);
+        }
+
+        .container2 ul li:nth-of-type(3):hover img{
+            transform: perspective(500px) rotateX(180deg);
         }
     </style>
 </head>
@@ -154,6 +201,19 @@
             </li>
             <li>
                 <img src="./images/icon4.svg" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="container2">
+        <ul>
+            <li>
+                <img src="./images/dog.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/dog.jpg" alt="">
+            </li>
+            <li>
+                <img src="./images/dog.jpg" alt="">
             </li>
         </ul>
     </div>
